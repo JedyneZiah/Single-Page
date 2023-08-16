@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  background-color: white;
+  height: 100vw;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 15px 20px;
+  gap: 30px;
+  height: 100%;
+}
+
+nav ul li:hover{
+  color: #969918;
+}
+
+
+main {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30vh;
+  background-color: #F6F1E9;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  padding: 12px;
+  gap: 12px;
+}
+
+.search-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 45px;
+  padding: 0px 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.input  {
+  width: 100%;
+  max-width: 750px;
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+}
+.img-container{
+  width: 100%;
+  max-width: 900px;
+  height: 200px;
+  border-radius: 3px;
+}
+
+.img-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu {
+  border-radius: 8px;
+}
+
+.food-selection {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+  gap: 20px;
+  list-style: none;
+  padding: 8px;
+}
+.food-selection i {
+  margin-right: 8px;
+  color: #969918;
+}
+
+.food-selection li {
+  display: inline-block;
+  padding: 15px 0px;
+  position: relative;
+}
+.food-selection li:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #969918;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.food-selection li:hover:after{ 
+  width: 100%; 
+  left: 0; 
+}
+
+.food-grid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  padding: 20px;
+  gap: 20px;
+}
+.food-grid div{
+  width: 100%;
+  height: 120px;    
+}
+
+.food-grid div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  
+}
+
+.food-container{
+  display: flex;
+  padding: 10px;
+  margin-left: 20px;
+}
+.food-container p{
+  font-size: large;
+  font-style: bold;
+}
+
+.food-combo {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  padding: 20px;
+  gap: 20px;
+}
+.food-combo div{
+  width: 100%;
+  height: 120px;    
+}
+
+.food-combo div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  
+}
+.food-order {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+
+  padding: 20px;
+  gap: 15px;
+  border-radius: 8px;
+}
+
+.address {
+  display: flex;
+  gap: 8px;
+}
+.order{
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.img-order{
+  width: 80px;
+  height: 80px;
+}
+
+.img-order img{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.order-content{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.order-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.add{
+  display: flex;
+  align-items: center;
+}
+.add h3 {
+  margin-left: 12px;
+}
+.bill div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-row{
+  margin: 20px 0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #969918;
+  border-radius: 8px;
+  gap: 20px;
+}
+
+.promotion-btn {
+  padding: 12px 8px;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.coupon-btn {
+  padding: 12px 20px;
+  border: none;
+  background-color: #969918;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.coupon-btn i{
+  margin-right: 8px;
+}
+
+.checkout-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  background-color: #969918;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  main {
+    flex-direction: column;
+  }
+}
